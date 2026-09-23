@@ -9,10 +9,10 @@
 <body>
     <h1>HTML DOM Events</h1>
     <p>Trigger a function on hover that will output "Hello World":</p>
-    //Issue: "onmouseover" event failed to trigger desired event.
-    //Fix: Changed the event from "onmouseover" to onfocus.
+    <!-- Issue: "onmouseover" event failed to trigger desired event when navigating with keyboard -->
+    <!-- Fix: Added the event from "onfocus" -->
 
-    <button onfocus="myFunction()">Action!</button>
+    <button onfocus="myFunction()" onmouseover="myFunction()">Action!</button>
     <p id="demo"></p>
 </body>
 <script>
