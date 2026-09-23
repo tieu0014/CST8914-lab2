@@ -16,14 +16,22 @@
       margin: 4px 2px;
       cursor: pointer;
     }
+    /*Issue: Hover and active states were not defined for the button */
+    .button:hover {
+      background-color: #1b531e;
+    }
+    .button:active {
+      background-color: #246428;
+    }
 
     body {
       padding: 20px;
       background-color: #2f2f2f;
     }
-
+    /*Issue: The text color was too dark, and therefore failed to pass the color contrast test against the background.
+      Fix: Changed the text color to a lighter shade. */
     h1, h2, p {
-      color: black;
+      color: rgb(245, 241, 241);
     }
   </style>
 </head>
@@ -33,8 +41,8 @@
   <h1>HTML made Easy</h1>
 
   <p>What causes errors in HTML?</p>
-
-  <div class="button">Submit answers</div>
+<!-- Issue: The button was classified as a div instead of a button -->
+  <button class="button" type="button">Submit answers</button>
 
 </body>
 
